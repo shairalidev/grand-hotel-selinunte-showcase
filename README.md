@@ -63,19 +63,19 @@ A cost calculator, a PDF quote generator and a receipt generator. Together they 
 ## Architecture
 
 ```mermaid
-flowchart TB
+flowchart LR
   subgraph L0["Client"]
-    direction LR
+    direction TB
     L0_0["Website (React)"]
     L0_1["WhatsApp"]
   end
   subgraph L1["Edge"]
-    direction LR
+    direction TB
     L1_0["Nginx on AWS"]
     L1_1["SSL"]
   end
   subgraph L2["Application"]
-    direction LR
+    direction TB
     L2_0["Node.js API"]
     L2_1["AI chat service"]
     L2_2["PDF & receipt tools"]
